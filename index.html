@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Connect - Your Automotive Assistant</title>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        .features h2 {
+            margin-bottom: 2rem;
+            color: #1e3c72;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            bottom: 16px;
+            right: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to Car Connect</h1>
+        <p>Your intelligent automotive assistant, ready to help with all your car-related questions and needs.</p>
+    </div>
+
+    <section class="features">
+        <h2>How Can We Help You?</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Car Maintenance</h3>
+                <p>Get expert advice on maintaining your vehicle in top condition.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Troubleshooting</h3>
+                <p>Identify common car problems and get solutions instantly.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Service Scheduling</h3>
+                <p>Easy scheduling and reminders for your car service needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+        location="us-central1"
+        project-id="innate-lacing-450600-r5"
+        agent-id="30ada13b-5731-433a-8b2b-336c30c9cfb8"
+        language-code="en"
+        max-query-length="-1">
+        <df-messenger-chat-bubble
+            chat-title="Car Connect">
+        </df-messenger-chat-bubble>
+    </df-messenger>
+</body>
+</html>
